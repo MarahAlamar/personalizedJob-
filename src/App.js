@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import GreetingPage from './greetingPage';
+import Content from './content';
+import IniteFreind from './inviteFr';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 
 function App() {
+  const candidateName = "Marah ";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+<>
+
+<div>
+      <GreetingPage candidateName={candidateName} />
     </div>
-  );
+
+  <Content/>
+
+  <Router>
+      <Routes>
+          <Route path="/inviteFr" Component={IniteFreind} />
+
+          
+      </Routes>
+    </Router>
+    </>
+    );
 }
 
 export default App;
