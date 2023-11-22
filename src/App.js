@@ -14,7 +14,6 @@ function App() {
       <GreetingPage candidateName={candidateName} />
     </div>
 
-  <Content/>
 
   <Router>
       <Routes>

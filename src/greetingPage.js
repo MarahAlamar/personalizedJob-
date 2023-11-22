@@ -1,11 +1,18 @@
 
 import React, { useState } from 'react';
 import './greetingPage.css';
+import { FaSun, FaMoon } from 'react-icons/fa';
+import Content from './content';
+import Button from 'react-bootstrap/Button';
+import { AiOutlineClockCircle } from 'react-icons/ai';
+
+
 
 // GreetingPage component
 function GreetingPage({ candidateName }) {
  // State for dark mode
  const [isDarkMode, setIsDarkMode] = useState(false);
+ 
 
  // State for job status
  const [jobStatus, setJobStatus] = useState('');
@@ -20,40 +27,59 @@ function GreetingPage({ candidateName }) {
 
  // Function to toggle dark mode
  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
- };
+  setIsDarkMode(!isDarkMode);
+};
 
  
 
  // Render the component
  return (
     <>
-      <div className={`app-container ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
-        <h2>Hello, {candidateName}!</h2>
-
-        {/* Toggle button for dark mode */}
-        <label>
-          <input type="checkbox" checked={isDarkMode} onChange={toggleDarkMode} />
-        </label>
+  
+      <div className={`app-container ${isDarkMode ? 'dark-mode' : 'light-mode'} `}>
+      <div className="header-container">
+        <h4>Hello, {candidateName}!</h4>
+        <div className="toggle-container" onClick={toggleDarkMode}>
+          {isDarkMode ? <FaMoon className="moon-icon" /> : <FaSun className="sun-icon" />}
+        </div>
+       
       </div>
 
-      <div className={`Job-content ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
+      <div className={`Job-content ${isDarkMode ? 'dark-mode' : 'light-mode'} `}>
         <form>
-          <h3>Are you interested in this job?</h3>
-          <p>22H : 30M</p>
+        <div className="form-row"  style={{ backgroundColor: isDarkMode ? '#fff' : '#002147', color: isDarkMode ? '#000' : '#fff'}}>
+      <div className="question">
+        <h6>Are you interested in this job?</h6>
+      </div>
+          <div className="time">
+          <b><p >    <AiOutlineClockCircle style={{ marginRight: '5px' }} />
+      22H : 30M</p></b> 
+      </div>
 
           {/* Radio buttons for job status */}
-          <div checked={isDarkMode} onChange={toggleDarkMode}>
-            <button value="yes" checked={jobStatus === 'yes'} onChange={handleJobStatusChange}>Accept the invitation</button>
+          <div className="buttons">
+           
+            <Button variant="primary" size="sm" style={{   backgroundColor:'#1919e6'}}  onChange={handleJobStatusChange}>
+            Accept the invitation
+        </Button>{' '}
+        
+        <Button variant="secondary" size="sm" onClick={handleJobStatusChange}>
+        Pass it to friend
+        </Button>
 
-            <button value="no" checked={jobStatus === 'no'} onChange={handleJobStatusChange}>Pass it to friend</button>
+        
           </div>
 
-       
+          </div>
     
         </form>
-      </div>
-    
+  <div className='Content'>
+        <Content isDarkMode={isDarkMode} jobStatus={jobStatus} onJobStatusChange={handleJobStatusChange} />
+        </div>
+     
+        </div>
+        </div>
+
     </>
  );
 
@@ -61,5 +87,3 @@ function GreetingPage({ candidateName }) {
 
 
 export default GreetingPage;
-//
-//This code has been updated with proper commenting. Comments have been added to explain the purpose of each part of the code. The comments are concise and clear, making it easier for you to understand the code..</s>

@@ -10,19 +10,19 @@ import { AiOutlineQuestionCircle } from 'react-icons/ai';
 
 
 
-function Content() {
+function Content({ isDarkMode, jobStatus, onJobStatusChange }) {
   return (
  
    
 <div style={{display:'flex', justifyContent:'center' ,alignItems:'center'}}>
-<Card  style={{ width: '45rem' , backgroundColor:' #002147' ,  color: 'white'}}>
+<Card  style={{ width: '45rem' ,  backgroundColor: isDarkMode ? '#002147' : '#fff', color: isDarkMode ? '#fff' : '#000'}}>
         <Card.Header style={{backgroundColor:'#1919e6' , textAlign:'center' }}><b>Job Invitation</b>  <AiOutlineQuestionCircle /></Card.Header>
         <Card.Body>
           <Card.Title > 
 <div  style={{ display: 'flex', alignItems: 'center' }}>
           <img src={LogoImag} alt="Logo 01" height="80" loading="lazy"   style={{borderRadius:'10px'}} />
           <div style={{ marginLeft: '10px' }}>
-            <h4>Lead Product Design</h4>
+            <h4 >Lead Product Design</h4>
 
 <h6 style={{fontSize:'13px'}}>Adobe XD. JIRA. Figma. Leadership-UX/CX-Prototyping</h6>
 <p style={{fontSize:'12px'}}>Full Time(Hybrid). Amman, Jordan. Telecom industy</p> 

@@ -1,38 +1,86 @@
-body, html {
-    height: 100%;
-    margin: 0;
-  }
 
-  
-.app-container {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    text-align: center;
-    justify-content: space-between;
-    
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0; /* Default background color */
+  transition: background-color ; /* Add transition for smooth color change */
 }
 
 .dark-mode {
   background-color: #333;
-  color: #fff;
-  
+  color: #fff; /* Dark mode background color */
 }
-
 .light-mode {
   background-color: #fff;
   color: #333;
   
 }
 
-.Job-content{
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    text-align: center;
-    justify-content: space-between;
-    background-color: fff;
-    color: #333;
+.app-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  
 }
 
+.Job-content {
+  padding: 10px;
+  text-align: center;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+
+}
+
+h4{
+  margin-left: 280px;
+}
+.toggle-container{
+margin-right: 280px;
+}
+
+
+.Content{
+
+  text-align: left;
+}
+
+.time {
+  flex: 1;
+margin-top: 15px;
+  text-align: right;
+  font-size:15px;
+
+}
+
+
+.form-row {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;/* Border color */
+  
+    margin-bottom: 10px;
+  height: 60px;
+
+}
+
+.question {
+  margin-right: 15px; 
+  margin-left: 15px;
+}
+
+.buttons {
+  flex: 1.5;
+  display: flex;
+  justify-content: space-around; 
+  border-radius: 5px;
+}
 
