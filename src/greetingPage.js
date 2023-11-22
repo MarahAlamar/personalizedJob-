@@ -38,7 +38,7 @@ function GreetingPage({ candidateName }) {
   
       <div className={`app-container ${isDarkMode ? 'dark-mode' : 'light-mode'} `}>
       <div className="header-container">
-        <h4>Hello, {candidateName}!</h4>
+        <h5>Hello, {candidateName}!</h5>
         <div className="toggle-container" onClick={toggleDarkMode}>
           {isDarkMode ? <FaMoon className="moon-icon" /> : <FaSun className="sun-icon" />}
         </div>

@@ -16,7 +16,7 @@ function Content({ isDarkMode, jobStatus, onJobStatusChange }) {
    
 <div style={{display:'flex', justifyContent:'center' ,alignItems:'center'}}>
 <Card  style={{ width: '45rem' ,  backgroundColor: isDarkMode ? '#002147' : '#fff', color: isDarkMode ? '#fff' : '#000'}}>
-        <Card.Header style={{backgroundColor:'#1919e6' , textAlign:'center' }}><b>Job Invitation</b>  <AiOutlineQuestionCircle /></Card.Header>
+        <Card.Header style={{ backgroundColor: isDarkMode ? '#1919e6' : '#1919e6', color: isDarkMode ? '#fff' : '#fff' , textAlign:'center' }}><b>Job Invitation</b>  <AiOutlineQuestionCircle /></Card.Header>
         <Card.Body>
           <Card.Title > 
 <div  style={{ display: 'flex', alignItems: 'center' }}>
