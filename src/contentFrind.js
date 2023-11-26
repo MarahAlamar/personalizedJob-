@@ -95,7 +95,7 @@ function ContentFrind({ isDarkMode }) {
   </Form.Group>
 </Row>
       {/* Submit Button */}
-      <Button href="/acceptFrind/closed" variant="primary"  style={{  borderRadius: '13px',
+      <Button href="/closed" variant="primary"  style={{  borderRadius: '13px',
         height: '50px',
         backgroundColor: '#1919e6',
 

@@ -4,6 +4,7 @@ import IniteFriend from './inviteFr';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Aproval from './aproval';
 import Screen from './screen';
+import Closed from './closed';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
 
           <Route path="/inviteFr" Component={IniteFriend} />
           <Route  exact path="/screen" Component={Screen} />
-
+<Route exact path='/closed' Component={Closed}/>
           
       </Routes>
     </Router>
@@ -26,3 +27,4 @@ function App() {
 }
 
 export default App;
+ 

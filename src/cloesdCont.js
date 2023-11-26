@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import './content.css';
 import { MdAddCircle} from 'react-icons/md';
 import LogoImag from './logo.jpg';
 import { MdRemoveCircle } from 'react-icons/md';
@@ -10,19 +11,19 @@ import { AiOutlineClockCircle } from 'react-icons/ai';
 
 
 
-function Content({ isDarkMode, jobStatus, onJobStatusChange }) {
+function ClosedCont({ isDarkMode }) {
   return (
  
    
 <div style={{display:'flex', justifyContent:'center' ,alignItems:'center'}}>
-<Card  style={{ width: '45rem' ,  backgroundColor: isDarkMode ? '#002147' : '#fff', color: isDarkMode ? '#fff' : '#000'}}>
-        <Card.Header style={{ backgroundColor: isDarkMode ? '#1919e6' : '#1919e6', color: isDarkMode ? '#fff' : '#fff' , textAlign:'center' }}><b>Job Invitation</b>  <AiOutlineQuestionCircle /></Card.Header>
+<Card  style={{ width: '45rem' ,  backgroundColor: isDarkMode ? '#061329' : '#fff', color: isDarkMode ? '#fff' : '#000'}}>
+        <Card.Header style={{ backgroundColor: isDarkMode ? '#FB0F1F' : '#FB0F1F', color: isDarkMode ? '#fff' : '#fff' , textAlign:'center' }}><b>Closed</b>  <AiOutlineQuestionCircle /></Card.Header>
         <Card.Body>
           <Card.Title > 
 <div  style={{ display: 'flex', alignItems: 'center' }}>
-          <img src={LogoImag} alt="Logo 01" height="80" loading="lazy"   style={{borderRadius:'10px'}} />
+          <img src={LogoImag} alt="Logo 01" height="70" loading="lazy"   style={{borderRadius:'10px'}} />
           <div style={{ marginLeft: '10px' }}>
-            <h4 >Lead Product Design  <AiOutlineClockCircle style={{ marginRight: '5px' }}></AiOutlineClockCircle></h4>
+          <h4 >Lead Product Design  <AiOutlineClockCircle style={{ marginRight: '5px' }}></AiOutlineClockCircle></h4>
 
 <h6 style={{fontSize:'13px'}}>Adobe XD. JIRA. Figma. Leadership-UX/CX-Prototyping</h6>
 <p style={{fontSize:'12px'}}>Full Time(Hybrid). Amman, Jordan. Telecom industy</p> 
@@ -79,7 +80,9 @@ function Content({ isDarkMode, jobStatus, onJobStatusChange }) {
       </Card>
    </div>
 
+   
+
   );
 }
 
-export default Content;
+export default ClosedCont;

@@ -2,7 +2,8 @@ import React from 'react';
 import { useState } from 'react';
 import './greetingPage.css';
 import { FaSun, FaMoon } from 'react-icons/fa';
-import Screening from './screening';
+import ClosedCont from './cloesdCont';
+
 
 
 function Closed(){
@@ -50,7 +51,7 @@ function Closed(){
       <div className={`Job-content ${isDarkMode ? 'dark-mode' : 'light-mode'} `}>
         
   <div className='Content'>
-        <Screening isDarkMode={isDarkMode} jobStatus={jobStatus} onJobStatusChange={handleJobStatusChange} />
+        <ClosedCont isDarkMode={isDarkMode} jobStatus={jobStatus} onJobStatusChange={handleJobStatusChange} />
         </div>
      
         </div>
