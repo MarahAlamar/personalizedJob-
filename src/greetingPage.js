@@ -17,13 +17,18 @@ function GreetingPage({ candidateName }) {
  // State for job status
  const [jobStatus, setJobStatus] = useState('');
 
- 
-
 
  // Function to handle job status change
+
  const handleJobStatusChange = (event) => {
-    setJobStatus(event.target.value);
+  const newJobStatus = event.target.value;
+  setJobStatus(newJobStatus);
+ 
+  
+  
  };
+
+ 
 
  // Function to toggle dark mode
  const toggleDarkMode = () => {
@@ -38,7 +43,8 @@ function GreetingPage({ candidateName }) {
   
       <div className={`app-container ${isDarkMode ? 'dark-mode' : 'light-mode'} `}>
       <div className="header-container">
-        <h5>Hello, {candidateName}!</h5>
+        <h5>Hello, Marah!</h5>
+     
         <div className="toggle-container" onClick={toggleDarkMode}>
           {isDarkMode ? <FaMoon className="moon-icon" /> : <FaSun className="sun-icon" />}
         </div>
@@ -59,14 +65,13 @@ function GreetingPage({ candidateName }) {
           {/* Radio buttons for job status */}
           <div className="buttons">
            
-            <Button variant="primary" size="sm" style={{   backgroundColor:'#1919e6'}}  onChange={handleJobStatusChange}>
+            <Button href='/aproval' variant="primary" size="sm" style={{   backgroundColor:'#1919e6'}}  onChange={handleJobStatusChange}>
             Accept the invitation
         </Button>{' '}
         
-        <Button variant="secondary" size="sm" onClick={handleJobStatusChange}>
+        <Button href="/inviteFr" variant="secondary" size="sm" style={{   backgroundColor:'#061329'}} onClick={handleJobStatusChange}>
         Pass it to friend
         </Button>
-
         
           </div>
 

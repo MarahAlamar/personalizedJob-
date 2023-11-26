@@ -1,23 +1,22 @@
 import './App.css';
 import GreetingPage from './greetingPage';
-import Content from './content';
-import IniteFreind from './inviteFr';
+import IniteFriend from './inviteFr';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
+import Aproval from './aproval';
+import Screen from './screen';
 
 function App() {
-  const candidateName = "Marah ";
   return (
 <>
-
-<div>
-      <GreetingPage candidateName={candidateName} />
-    </div>
-
-
   <Router>
       <Routes>
-          <Route path="/inviteFr" Component={IniteFreind} />
+      <Route  exact path="/" Component={GreetingPage} />
+
+      <Route  exact path="/aproval" Component={Aproval} />   
+
+
+          <Route path="/inviteFr" Component={IniteFriend} />
+          <Route  exact path="/screen" Component={Screen} />
 
           
       </Routes>

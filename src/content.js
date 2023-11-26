@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import './content';
 import { MdAddCircle} from 'react-icons/md';
 import LogoImag from './logo.jpg';
 import { MdRemoveCircle } from 'react-icons/md';

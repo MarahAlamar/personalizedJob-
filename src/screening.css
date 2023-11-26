@@ -1,0 +1,12 @@
+.video-screening {
+    display: flex;
+    width: 50%;
+    height: 80vh;
+    justifyContent:space-between;
+
+   }
+   
+   video {
+    object-fit: cover;
+
+   }

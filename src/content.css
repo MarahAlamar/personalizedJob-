@@ -1,3 +1,25 @@
-Card{
-    text-align: center;
-}
+.FromInv {
+    display: flex;
+    justify-content: center;
+    height: 100vh; /* Adjust as needed */
+  }
+  
+.invite-friend {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+   }
+   
+   .invite-friend form {
+    display: flex;
+    flex-direction: column;
+   }
+   
+   .invite-friend label {
+    margin-bottom: 5px;
+justify-content: space-between;
+
+   }
+  

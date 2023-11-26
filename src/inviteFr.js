@@ -1,22 +1,66 @@
-import { Card } from "react-bootstrap";
+import React from 'react';
+import { useState } from 'react';
+import { FaSun, FaMoon } from 'react-icons/fa';
+import ContentFrind from './contentFrind';
 
-function IniteFreind(){
-    return(
 
-<>
-<Card border="dark" style={{ width: '18rem' }}>
-        <Card.Header>Header</Card.Header>
-        <Card.Body>
-          <Card.Title>Dark Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-        </Card.Body>
-      </Card>
-</>
 
-    )
+
+
+
+function IniteFriend(){
+
+ 
+ const [isDarkMode, setIsDarkMode] = useState(false);
+ 
+
+ // State for job status
+ const [jobStatus, setJobStatus] = useState('');
+
+ 
+
+
+ // Function to handle job status change
+ const handleJobStatusChange = (event) => {
+    setJobStatus(event.target.value);
+ }
+
+ // Function to toggle dark mode
+ const toggleDarkMode = () => {
+  setIsDarkMode(!isDarkMode);
 }
 
-export default IniteFreind;
+ 
+ return (
+    <>
+  
+      <div className={`app-container ${isDarkMode ? 'dark-mode' : 'light-mode'}`}
+ 
+> 
+      <div className="header-container">
+      <h5 style={{ fontWeight: 'bold', marginRight: '-50%' }}>Hello, Marah !</h5>
+ 
+        <div className="toggle-container" onClick={toggleDarkMode}>
+          {isDarkMode ? <FaMoon className="moon-icon" /> : <FaSun className="sun-icon" />}
+        </div>
+
+      </div>
+
+      <div className={`Job-content ${isDarkMode ? 'dark-mode' : 'light-mode'} `}>
+       
+  <div className='ContentFrind'>
+        <ContentFrind isDarkMode={isDarkMode} jobStatus={jobStatus} onJobStatusChange={handleJobStatusChange} />
+        
+
+        </div>
+    
+        </div>
+        </div>
+
+    </>
+ );
+
+ }
+
+
+export default IniteFriend;
